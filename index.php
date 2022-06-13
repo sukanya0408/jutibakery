@@ -37,6 +37,8 @@ session_start();
                                     <th>นามสกุล</th>
                                     <th>ที่อยู่</th>
                                     <th>เบอร์โทร</th>
+                                    <th>ชื่อผู้ใช้</th>
+                                    <th>รหัสผ่าน</th>
                                     <th>อีเมล</th>
                                     <th>แก้ไข</th>
                                     <th>ลบ</th>
@@ -56,6 +58,8 @@ session_start();
                                         <td><?= $row['ctm_sname']; ?></td>
                                         <td><?= $row['ctm_address']; ?></td>
                                         <td><?= $row['ctm_phone']; ?></td>
+                                        <td><?= $row['ctm_user']; ?></td>
+                                        <td><?= $row['ctm_password']; ?></td>
                                         <td><?= $row['ctm_email']; ?></td>
                                         <td><a href="edit.php?customer_id=<?= $row['customer_id'] ?>" class="btn btn-primary">แก้ไข</a></td>
                                         <td>

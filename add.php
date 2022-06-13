@@ -37,6 +37,14 @@ session_start();
                                 <input type="text" name="ctm_phone" class="form-control" />
                             </div>
                             <div class="mb-3">
+                                <label>ชื่อผู้ใช้:</label>
+                                <input type="text" name="ctm_user" class="form-control" />
+                            </div>
+                            <div class="mb-3">
+                                <label>รหัสผ่าน:</label>
+                                <input type="text" name="ctm_password" class="form-control" />
+                            </div>
+                            <div class="mb-3">
                                 <label>อีเมล:</label>
                                 <input type="text" name="ctm_email" class="form-control" />
                             </div>

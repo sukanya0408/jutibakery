@@ -46,8 +46,20 @@ include('conn.php');
                                 <input type="text" name="ctm_sname" class="form-control" value="<?= $result['ctm_name'] ?>" />
                             </div>
                             <div class="mb-3">
+                                <label>นามสกุล:</label>
+                                <input type="text" name="ctm_sname" class="form-control" value="<?= $result['ctm_name'] ?>" />
+                            </div>
+                            <div class="mb-3">
                                 <label>เบอร์โทร:</label>
                                 <input type="text" name="ctm_phone" class="form-control" value="<?= $result['ctm_phone'] ?>" />
+                            </div>
+                            <div class="mb-3">
+                                <label>ชื่อผู้ใช้:</label>
+                                <input type="text" name="ctm_user" class="form-control" value="<?= $result['ctm_user'] ?>" />
+                            </div>
+                            <div class="mb-3">
+                                <label>รหัสผ่าน:</label>
+                                <input type="text" name="ctm_password" class="form-control" value="<?= $result['ctm_password'] ?>" />
                             </div>
                             <div class="mb-3">
                                 <label>อีเมล:</label>
