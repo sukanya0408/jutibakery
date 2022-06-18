@@ -26,11 +26,11 @@ if (isset($_POST['save_cus'])) {
     $query_execute = $query_run->execute($data);
     if ($query_execute) {
         $_SESSION['message'] = "เพิ่มข้อมูลสำเร็จ";
-        header('Location: index.php');
+        header('Location: customer.php');
         exit(0);
     } else {
         $_SESSION['message'] = "เพิ่มข้อมูลไม่สำเร็จ";
-        header('Location: index.php');
+        header('Location: customer.php');
         exit(0);
     }
 }
@@ -59,11 +59,11 @@ if (isset($_POST['edit'])) {
         $query_execute = $stmt->execute($data);
         if ($query_execute) {
             $_SESSION['message'] = "แก้ไขข้อมูลสำเร็จ";
-            header('Location: index.php');
+            header('Location: customer.php');
             exit(0);
         } else {
             $_SESSION['message'] = "แก้ไขข้อมูลไม่สำเร็จ";
-            header('Location: index.php');
+            header('Location: customer.php');
             exit(0);
         }
     } catch (PDOException $e) {
@@ -83,11 +83,11 @@ if (isset($_POST['delete_cus'])) {
         $query_execute = $stmt->execute($data);
         if ($query_execute) {
             $_SESSION['message'] = "ลบข้อมูลสำเร็จ";
-            header('Location: index.php');
+            header('Location: customer.php');
             exit(0);
         } else {
             $_SESSION['message'] = "ลบข้อมูลไม่สำเร็จ";
-            header('Location: index.php');
+            header('Location: customer.php');
             exit(0);
         }
     } catch (PDOException $e) {

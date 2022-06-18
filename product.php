@@ -9,7 +9,8 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>หน้าแรก</title>
+    <title>ประเภทสินค้า</title>
+    <?php include 'navbar/head.php' ?>
 </head>
 
 <body>
@@ -24,22 +25,16 @@ session_start();
                 ?>
                 <div class="card">
                     <div class="card-body">
-                        <h3>ข้อมูลลูกค้า
-                            <a href="add.php" class="btn btn-primary float-end">เพิ่มข้อมูล</a>
+                        <h3>ประเภทสินค้า
+                            <a href="product_add.php" class="btn btn-primary float-end">เพิ่มข้อมูล</a>
                         </h3>
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>รหัส</th>
-                                    <th>ชื่อ</th>
-                                    <th>นามสกุล</th>
-                                    <th>ที่อยู่</th>
-                                    <th>เบอร์โทร</th>
-                                    <th>ชื่อผู้ใช้</th>
-                                    <th>รหัสผ่าน</th>
-                                    <th>อีเมล</th>
+                                    <th>ลำดับ</th>
+                                    <th>ชื่อประเภทสินค้า</th>
                                     <th>แก้ไข</th>
                                     <th>ลบ</th>
                                 </tr>
@@ -48,23 +43,17 @@ session_start();
                                 <?php
                                 $i = 1;
                                 require 'conn.php';
-                                $sql = "SELECT * FROM customer";
+                                $sql = "SELECT * FROM product_type";
                                 $stmt = $conn->query($sql);
                                 while ($row = $stmt->fetch()) {
                                 ?>
                                     <tr>
                                         <td><?= $i++; ?></td>
-                                        <td><?= $row['ctm_name']; ?></td>
-                                        <td><?= $row['ctm_sname']; ?></td>
-                                        <td><?= $row['ctm_address']; ?></td>
-                                        <td><?= $row['ctm_phone']; ?></td>
-                                        <td><?= $row['ctm_user']; ?></td>
-                                        <td><?= $row['ctm_password']; ?></td>
-                                        <td><?= $row['ctm_email']; ?></td>
-                                        <td><a href="edit.php?customer_id=<?= $row['customer_id'] ?>" class="btn btn-primary">แก้ไข</a></td>
+                                        <td><?= $row['product_type_name']; ?></td>
+                                        <td><a href="product_edit.php?product_type_id=<?= $row['product_type_id'] ?>" class="btn btn-primary">แก้ไข</a></td>
                                         <td>
-                                            <form action="crud.php" method="POST">
-                                                <button type="submit" name="delete_cus" value="<?= $row['customer_id'] ?>" class="btn btn-danger">ลบ</button>
+                                            <form action="product_crud.php" method="POST">
+                                                <button type="submit" name="delete_product" value="<?= $row['product_type_id'] ?>" class="btn btn-danger">ลบ</button>
                                             </form>
                                         </td>
                                     </tr>
