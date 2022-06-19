@@ -9,7 +9,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>เพิ่มประเภทสินค้า</title>
+    <title>เพิ่มข้อมูลเบเกอรี่</title>
 </head>
 
 <body>
@@ -18,19 +18,27 @@ session_start();
             <div class="col-md-8 mt-4">
                 <div class="card">
                     <div class="card-body">
-                        <h3>ประเภทสินค้า
+                        <h3>ข้อมูลเบเกอรี่
                         <a href="index.php" class="btn btn-danger float-end">ย้อนกลับ</a>
                         </h3>
                     </div>
                     <div class="card-body">
-                        <form action="product_crud.php" method="POST">
+                        <form action="bakery_crud.php" method="POST">
                         <div class="col mb-3">
                             <div class="col mb-2">
-                                <label>ชื่อประเภทสินค้า:</label>
-                                <input type="text" name="product_type_name" class="form-control" />
+                                <label>ชื่อเบเกอรี่:</label>
+                                <input type="text" name="bk_name" class="form-control" />
+                            </div>
+                            <div class="col mb-2">
+                                <label>ราคา:</label>
+                                <input type="text" name="bk_price" class="form-control" />
+                            </div>
+                            <div class="col mb-2">
+                                <label>รหัสประเภทสินค้า:</label>
+                                <input type="text" name="product_type_id" class="form-control" />
                             </div>
                             <div class="mb-3">
-                                <button type="submit" name="save_product" class="btn btn-primary">เพิ่มประเภทสินค้า</button>
+                                <button type="submit" name="save_bakery" class="btn btn-primary">เพิ่มข้อมูลเบเกอรี่</button>
                             </div>
                         </form>
 

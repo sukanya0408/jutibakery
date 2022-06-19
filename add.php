@@ -16,7 +16,7 @@ session_start();
 <div class="container">
         <div class="text-center mt-4">
             <h3>เพิ่มข้อมูลลูกค้า</h3>
-            <p class="text-muted">กรอกแบบฟอร์มด้านล่างเพื่อเพิ่มผู้ใช้ใหม่
+            <p class="text-muted">กรอกแบบฟอร์มเพื่อเพิ่มผู้ใช้ใหม่
                 <hr>
             </p>
         </div>

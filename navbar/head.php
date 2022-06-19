@@ -13,13 +13,13 @@
           <a class="nav-link" href="product.php">ประเภทสินค้า</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="bakery.php">ข้อมูลเบเกอรี่</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#">รายการสั่งซื้อ</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">การแจ้งชำระเงิน</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">ข้อมูลสินค้า</a>
         </li>
       </ul>
     </div>

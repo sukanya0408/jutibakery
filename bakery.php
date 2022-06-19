@@ -9,7 +9,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>ประเภทสินค้า</title>
+    <title>ข้อมูลเบเกอรี่</title>
     <?php include 'navbar/head.php' ?>
 </head>
 
@@ -25,8 +25,8 @@ session_start();
                 ?>
                 <div class="card">
                     <div class="card-body">
-                        <h3>ประเภทสินค้า
-                            <a href="product_add.php" class="btn btn-primary float-end">เพิ่มข้อมูล</a>
+                        <h3>ข้อมูลเบเกอรี่
+                            <a href="bakery_add.php" class="btn btn-primary float-end">เพิ่มข้อมูล</a>
                         </h3>
                     </div>
                     <div class="card-body">
@@ -34,7 +34,9 @@ session_start();
                             <thead class="table-warning";>
                                 <tr>
                                     <th>ลำดับ</th>
-                                    <th>ชื่อประเภทสินค้า</th>
+                                    <th>ชื่อเบเกอรี่</th>
+                                    <th>ราคา</th>
+                                    <th>รหัสประเภทสินค้า</th>
                                     <th>แก้ไข</th>
                                     <th>ลบ</th>
                                 </tr>
@@ -43,17 +45,19 @@ session_start();
                                 <?php
                                 $i = 1;
                                 require 'conn.php';
-                                $sql = "SELECT * FROM product_type";
+                                $sql = "SELECT * FROM bakery";
                                 $stmt = $conn->query($sql);
                                 while ($row = $stmt->fetch()) {
                                 ?>
                                     <tr>
                                         <td><?= $i++; ?></td>
-                                        <td><?= $row['product_type_name']; ?></td>
-                                        <td><a href="product_edit.php?product_type_id=<?= $row['product_type_id'] ?>" class="btn btn-primary">แก้ไข</a></td>
+                                        <td><?= $row['bk_name']; ?></td>
+                                        <td><?= $row['bk_price']; ?></td>
+                                        <td><?= $row['product_type_id']; ?></td>
+                                        <td><a href="bakery_edit.php?bk_id=<?= $row['bk_id'] ?>" class="btn btn-primary">แก้ไข</a></td>
                                         <td>
-                                            <form action="product_crud.php" method="POST">
-                                                <button type="submit" name="delete_product" value="<?= $row['product_type_id'] ?>" class="btn btn-danger">ลบ</button>
+                                            <form action="bakery_crud.php" method="POST">
+                                                <button type="submit" name="delete_bakery" value="<?= $row['bk_id'] ?>" class="btn btn-danger">ลบ</button>
                                             </form>
                                         </td>
                                     </tr>
