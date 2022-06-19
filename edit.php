@@ -46,10 +46,6 @@ include('conn.php');
                                 <input type="text" name="ctm_sname" class="form-control" value="<?= $result['ctm_name'] ?>" />
                             </div>
                             <div class="mb-3">
-                                <label>นามสกุล:</label>
-                                <input type="text" name="ctm_sname" class="form-control" value="<?= $result['ctm_name'] ?>" />
-                            </div>
-                            <div class="mb-3">
                                 <label>เบอร์โทร:</label>
                                 <input type="text" name="ctm_phone" class="form-control" value="<?= $result['ctm_phone'] ?>" />
                             </div>
