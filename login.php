@@ -2,9 +2,8 @@
 <html lang="en">
 
 <head>
-  <title>หน้าล็อกอิน</title>
+  <title>Login</title>
 </head>
-
 <body>
   <div class="car_system mt-5 pt-5">
     <div class="row">
@@ -18,7 +17,7 @@
               <div class="text-center">
                 <button type="submit" class="btn btn-primary btn-block my-3">เข้าสู่ระบบ</button>
                 <a href="register.php" class="nav-link">
-                  <h5>สมัครสมาชิกก่อนเข้าสู่ระบบ</h5>
+                  <h5>สมัครสมาชิก</h5>
                 </a>
               </div>
             </form>
