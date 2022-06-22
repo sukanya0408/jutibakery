@@ -19,7 +19,7 @@ session_start();
                 <div class="card">
                     <div class="card-body">
                         <h3>ข้อมูลเบเกอรี่
-                        <a href="index.php" class="btn btn-danger float-end">ย้อนกลับ</a>
+                        <a href="bakery.php" class="btn btn-danger float-end">ย้อนกลับ</a>
                         </h3>
                     </div>
                     <div class="card-body">
