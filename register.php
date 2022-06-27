@@ -7,15 +7,15 @@
 </head>
 
 <body>
-  <div class="juti_bakery">
+  <div class="juti_bakery mt-5 pt-6">
     <div class="row">
-      <div class="col mt-4">
-        <div class="card border-5 shadow">
+      <div class="col-12 col-sm-8 col-md-6 m-auto">
+      <div class="card border-0 shadow">
           <div class="card-header text-black bg-warning text-center">
             <h3>สมัครสมาชิก</h3>
           </div>
           <div class="card-body">
-            <form class="row g-2">
+            <form class="row g-3">
               <div class="col-md-6">
                 <label class="form-label">ชื่อ :</label>
                 <input type="text" name="ctm_name" class="form-control" />
@@ -44,11 +44,11 @@
                 <label class="form-label">ที่อยู่:</label>
                 <input type="text" name="ctm_address" class="form-control" />
               </div>
-              <div class="mb-3 text-center">
+              <div class="mb-6 text-center">
                 <button type="submit" name="save_cus" class="btn btn-warning">สมัครสมาชิก</button>
               </div>
               <div class="container signin center">
-                <p>เป็นสมาชิกแล้ว<a href="login.php"> เข้าสู่ระบบ </a></p>
+                <p class="text-center">เป็นสมาชิกแล้ว<a href="login.php"> เข้าสู่ระบบ </a></p>
           </div>
             </form>
           </div>
