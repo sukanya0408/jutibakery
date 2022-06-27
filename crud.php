@@ -11,9 +11,9 @@ if (isset($_POST['save_cus'])) {
     $ctm_user = $_POST['ctm_user'];
     $ctm_password = $_POST['ctm_password'];
 
+    $ctm_password = password_hash($ctm_password, PASSWORD_DEFAULT);
     $query = "INSERT INTO customer(ctm_name,ctm_sname,ctm_address,ctm_phone,ctm_email,ctm_user,ctm_password) VALUES(:ctm_name,:ctm_sname,:ctm_address,:ctm_phone,:ctm_email,:ctm_user,:ctm_password)";
     $query_run = $conn->prepare($query);
-
     $data = [
         ':ctm_name' => $ctm_name,
         ':ctm_sname' => $ctm_sname,
@@ -42,10 +42,13 @@ if (isset($_POST['edit'])) {
     $ctm_address = $_POST['ctm_address'];
     $ctm_email = $_POST['ctm_email'];
     $ctm_phone = $_POST['ctm_phone'];
+    $ctm_user = $_POST['ctm_user'];
+    $ctm_password = $_POST['ctm_password'];
     try {
-        $query = "UPDATE customer SET ctm_name = :ctm_name, ctm_sname = :ctm_sname, ctm_address = :ctm_address, ctm_email = :ctm_email , ctm_phone = :ctm_phone, ctm_user = :ctm_user, ctm_password = :ctm_password WHERE customer_id = :customer_id";
-        $stmt = $conn->prepare($query);
-
+        try {
+            $ctm_password = password_hash($ctm_password, PASSWORD_DEFAULT);
+            $query = "UPDATE customer SET ctm_name = :ctm_name, ctm_sname = :ctm_sname, ctm_address = :ctm_address,ctm_email = :ctm_email, ctm_phone = :ctm_phone, ctm_user = :ctm_user, ctm_password = :ctm_password WHERE customer_id = :customer_id";
+            $stmt = $conn->prepare($query);
         $data = [
             ':ctm_name' => $ctm_name,
             ':ctm_sname' => $ctm_sname,

@@ -1,31 +1,53 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>เข้าสู่ระบบ</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <style type="text/css">
-		
-	</style>
+  <title>หน้าล็อกอิน</title>
 </head>
+
 <body>
-  <div class="juti_bakery mt-5 pt-6">
+  <div class="container mt-5 pt-5">
     <div class="row">
       <div class="col-12 col-sm-8 col-md-6 m-auto">
+        <?php if (isset($_SESSION['error_fill'])) : ?>
+          <div class="alert alert-danger" role="alert">
+            <?php echo $_SESSION['error_fill']; ?>
+          </div>
+        <?php endif; ?>
+        <?php if (isset($_SESSION['error_user'])) : ?>
+          <div class="alert alert-danger" role="alert">
+            <?php echo $_SESSION['error_user']; ?>
+          </div>
+        <?php endif; ?>
+        <?php if (isset($_SESSION['error_pass'])) : ?>
+          <div class="alert alert-danger" role="alert">
+            <?php echo $_SESSION['error_pass']; ?>
+          </div>
+        <?php endif; ?>
         <div class="card border-0 shadow">
           <div class="card-body">
-          <div class="card-header text-black bg-warning text-center">
-          <h3 class="card-title text-center">เข้าสู่ระบบ</h3>
-          </div>
-            <form action="">
-              <input type="text" name="" id="" class="form-control my-3 py-6" placeholder="ชื่อผู้ใช้">
-              <input type="password" name="" id="" class="form-control my-3 py-6" placeholder="รหัสผ่าน">    
-              <a href="home.php" class="nav-link">        
-              <div class="mb-1 text-center">
-                <button type="submit" class="btn btn-warning">เข้าสู่ระบบ</button>
-                <div class="container signin center">
-                <p class="text-center"><a href="register.php"> สมัครสมาชิก </a></p>
-          </div>
+            <h1 class="card-title text-center">LOGIN</h1>
+            <form action="login_db.php" method="POST">
+              <div class="col-12 mt-2">
+                <label class="form-label">ชื่อผู้ใช้ :</label>
+                <input type="text" name="ctm_user" class="form-control" />
+              </div>
+              <div class="col-12 mt-2">
+                <label class="form-label">รหัสผ่าน :</label>
+                <input type="password" name="ctm_password" class="form-control" />
+              </div>
+              <div class="text-center">
+                <button type="submit" name="login" class="btn btn-primary btn-block my-3">เข้าสู่ระบบ</button>
+                <a href="register.php" class="nav-link">
+                  <h5>สมัครสมาชิกก่อนเข้าสู่ระบบ</h5>
+                </a>
               </div>
             </form>
           </div>
@@ -33,7 +55,13 @@
       </div>
     </div>
   </div>
-  
 </body>
 
 </html>
+<?php
+if (isset($_SESSION['error_fill']) || isset($_SESSION['error_user']) || isset($_SESSION['error_pass'])) {
+  unset($_SESSION['error_fill']);
+  unset($_SESSION['error_user']);
+  unset($_SESSION['error_pass']);
+}
+?>

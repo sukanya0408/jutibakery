@@ -55,7 +55,7 @@ include('conn.php');
                             </div>
                             <div class="mb-3">
                                 <label>รหัสผ่าน:</label>
-                                <input type="text" name="ctm_password" class="form-control" value="<?= $result['ctm_password'] ?>" />
+                                <input type="password" name="ctm_password" class="form-control" value="<?= $result['ctm_password'] ?>" />
                             </div>
                             <div class="mb-3">
                                 <label>อีเมล:</label>
