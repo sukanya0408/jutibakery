@@ -47,7 +47,7 @@ include('conn.php');
                             </div>
                             <div class="mb-3">
                                 <label>รหัสประเภทสินค้า:</label>
-                                <input type="text" name="product_type_name" class="form-control" value="<?= $result['product_type_id'] ?>" />
+                                <input type="text" name="product_type_id" class="form-control" value="<?= $result['product_type_id'] ?>" />
                             </div>
                             <div class="mb-3">
                                 <button type="submit" name="edit" class="btn btn-primary">แก้ไขข้อมูลเบเกอรี่</button>

@@ -5,14 +5,14 @@ include('conn.php');
 if (isset($_POST['save_bakery'])) {
     $bk_name = $_POST['bk_name'];
     $bk_price = $_POST['bk_price'];
-    $product_type_name = $_POST['product_type_id'];
+    $product_type_id = $_POST['product_type_id'];
     $query = "INSERT INTO bakery(bk_name,bk_price,product_type_id) VALUES(:bk_name,:bk_price,:product_type_id)";
     $query_run = $conn->prepare($query);
 
     $data = [
         ':bk_name' => $bk_name,
         ':bk_price' => $bk_price,
-        ':product_type_name' => $product_type_name
+        ':product_type_id' => $product_type_id
     ];
     $query_execute = $query_run->execute($data);
     if ($query_execute) {
