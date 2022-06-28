@@ -33,9 +33,19 @@ session_start();
                                 <label>ราคา:</label>
                                 <input type="text" name="bk_price" class="form-control" />
                             </div>
+                            <div class="from-group">
+                                <label for="product_type_id">รหัสประเภทสินค้า</label>
                             <div class="col mb-2">
-                                <label>รหัสประเภทสินค้า:</label>
-                                <input type="text" name="product_type_id" class="form-control" />
+                                <label>รูปภาพเบเกอรี่:</label>
+                                <input type="file" name="bk_image" class="form-control" />
+                            </div>
+                            <div class="col mb-2">
+                                <label>วันที่เพิ่มสินค้า:</label>
+                                <input type="date" name="update_date" class="form-control" />
+                            </div>
+                            <div class="col mb-2">
+                                <label>วันหมดอายุ:</label>
+                                <input type="date" name="expire_date" class="form-control" />
                             </div>
                             <div class="mb-3">
                                 <button type="submit" name="save_bakery" class="btn btn-primary">เพิ่มข้อมูลเบเกอรี่</button>

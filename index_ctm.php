@@ -24,8 +24,27 @@ if (!isset($_SESSION['is_login'])) {
         <h1 class="mt-5">Home Page</h1>
         <div class="card mt-5 text-center">
           <div class="card-body">
-            <h1>ยินดีต้อนรับ</h1>
 
+            <?php
+            require 'conn.php';
+            $sql = "SELECT * FROM bakery";
+            $stmt = $conn->query($sql);
+            $result = $stmt->fetchAll();
+            foreach ($result as $row) {
+            ?>
+              <div class="col-sm-3" style="margin-bottom:50px;">
+                <img src="image/<?= $row['bk_image']; ?>" width="100%"><br>
+                <b><?= $row['bk_name']; ?></b>
+                <b>ประเภท <?= $row['product_type_id']; ?> </b><br>
+                ราคา <?= $row['bk_price']; ?>
+                วันที่เพิ่มสินค้า <?= $row['update_date']; ?>
+                วันหมดอายุ <?= $row['expire_date']; ?> <br>
+                <?php if ($row['bk_name'] > 0) {
+                  echo '<a href="#" style="width:100%" class="btn btn-success btn-sm">จอง</a>';
+                } else 
+                ?>
+              </div>
+            <?php } ?>
           </div>
         </div>
       </div>

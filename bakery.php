@@ -37,6 +37,9 @@ session_start();
                                     <th>ชื่อเบเกอรี่</th>
                                     <th>ราคา</th>
                                     <th>รหัสประเภทสินค้า</th>
+                                    <th>รูปภาพเบเกอรี่</th>
+                                    <th>วันที่เพิ่มสินค้า</th>
+                                    <th>วันหมดอายุ</th>
                                     <th>แก้ไข</th>
                                     <th>ลบ</th>
                                 </tr>
@@ -54,6 +57,9 @@ session_start();
                                         <td><?= $row['bk_name']; ?></td>
                                         <td><?= $row['bk_price']; ?></td>
                                         <td><?= $row['product_type_id']; ?></td>
+                                        <td><?= $row['bk_image']; ?></td>
+                                        <td><?= $row['update_date']; ?></td>
+                                        <td><?= $row['expire_date']; ?></td>
                                         <td><a href="bakery_edit.php?bk_id=<?= $row['bk_id'] ?>" class="btn btn-primary">แก้ไข</a></td>
                                         <td>
                                             <form action="bakery_crud.php" method="POST">

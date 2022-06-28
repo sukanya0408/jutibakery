@@ -50,7 +50,19 @@ include('conn.php');
                                 <input type="text" name="product_type_id" class="form-control" value="<?= $result['product_type_id'] ?>" />
                             </div>
                             <div class="mb-3">
-                                <button type="submit" name="edit" class="btn btn-primary">แก้ไขข้อมูลเบเกอรี่</button>
+                                <label>รูปภาพเบเกอรี่:</label>
+                                <input type="text" name="bk_image" class="form-control" value="<?= $result['bk_image'] ?>" />
+                            </div>
+                            <div class="mb-3">
+                                <label>วันที่เพิ่มสินค้า:</label>
+                                <input type="date" name="update_date" class="form-control" value="<?= $result['update_date'] ?>" />
+                            </div>
+                            <div class="mb-3">
+                                <label>วันหมดอายุ:</label>
+                                <input type="date" name="expire_date" class="form-control" value="<?= $result['expire_date'] ?>" />
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit" name="bakery_edit" class="btn btn-primary">แก้ไขข้อมูลเบเกอรี่</button>
                             </div>
                         </form>
 

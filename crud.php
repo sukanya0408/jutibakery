@@ -75,7 +75,7 @@ if (isset($_POST['edit'])) {
 }
 
 if (isset($_POST['delete_cus'])) {
-    $bk_id = $_POST['delete_cus'];
+    $customer_id = $_POST['delete_cus'];
     try {
         $query = "DELETE FROM customer WHERE customer_id = :customer_id";
         $stmt = $conn->prepare($query);
@@ -95,5 +95,6 @@ if (isset($_POST['delete_cus'])) {
         }
     } catch (PDOException $e) {
         echo $e->getMessage();
+    }
     }
 }
