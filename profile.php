@@ -82,7 +82,7 @@ if (!isset($_SESSION['is_login'])) {
                 <div class="card mt-5">
                     <div class="card-body">
                         <h4>รายละเอียด</h4>
-                        <span class="mt-5">Username</span> : <span><?php echo $row['username_c']; ?></span>
+                        <span class="mt-5">Username</span> : <span><?php echo $row['ctm_user']; ?></span>
                     </div>
                 </div>
             </div>

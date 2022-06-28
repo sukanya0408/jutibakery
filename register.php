@@ -9,14 +9,14 @@ session_start();
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <title>หน้าสมัครสมาชิก</title>
+  <title>สมัครสมาชิก</title>
 </head>
 
 <body>
   <div class="container">
     <div class="text-center mt-4">
-      <h3>สมัครสมาชิก</h3>
-      <p class="text-muted">กรอกแบบฟอร์มด้านล่างเพื่อสมัครเป็นสมาชิกของผู้ใช้ใหม่
+      <h2>สมัครสมาชิก</h2>
+      <p class="text-muted">กรอกแบบฟอร์มเพื่อสมัครเป็นสมาชิกของผู้ใช้ใหม่
         <hr>
       </p>
     </div>
@@ -40,11 +40,11 @@ session_start();
         <div class="card">
           <div class="card-body">
             <form class="row g-3" action="register_db.php" method="POST">
-              <div class="col-md-5">
+              <div class="col-md-6">
                 <label class="form-label">ชื่อ :</label>
                 <input type="text" name="ctm_name" class="form-control" />
               </div>
-              <div class="col-md-5">
+              <div class="col-md-6">
                 <label class="form-label">นามสกุล :</label>
                 <input type="text" name="ctm_sname" class="form-control" />
               </div>
@@ -56,11 +56,11 @@ session_start();
                 <label class="form-label">รหัสผ่าน :</label>
                 <input type="password" name="ctm_password" class="form-control" />
               </div>
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <label class="form-label">เบอร์โทรศัพท์:</label>
                 <input type="text" name="ctm_phone" class="form-control" />
               </div>
-              <div class="col-md-8">
+              <div class="col-md-6">
                 <label class="form-label">อีเมล:</label>
                 <input type="text" name="ctm_email" class="form-control" />
               </div>
@@ -69,7 +69,7 @@ session_start();
                 <input type="text" name="ctm_address" class="form-control" />
               </div>
               <div class="mb-3 text-center">
-                <button type="submit" name="regis" class="btn btn-primary">สมัครสมาชิก</button>
+                <button type="submit" name="regis" class="btn btn-warning">สมัครสมาชิก</button>
                 <a href="login.php" class="btn btn-danger">ยกเลิก</a>
               </div>
             </form>

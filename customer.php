@@ -38,7 +38,6 @@ session_start();
                                     <th>ชื่อ</th>
                                     <th>นามสกุล</th>
                                     <th>ชื่อผู้ใช้</th>
-                                    <th>รหัสผ่าน</th>
                                     <th>ที่อยู่</th>
                                     <th>เบอร์โทร</th>
                                     <th>อีเมล</th>
@@ -59,7 +58,6 @@ session_start();
                                         <td><?= $row['ctm_name']; ?></td>
                                         <td><?= $row['ctm_sname']; ?></td>
                                         <td><?= $row['ctm_user']; ?></td>
-                                        <td><?= $row['ctm_password']; ?></td>
                                         <td><?= $row['ctm_address']; ?></td>
                                         <td><?= $row['ctm_phone']; ?></td>
                                         <td><?= $row['ctm_email']; ?></td>

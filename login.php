@@ -9,7 +9,7 @@ session_start();
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <title>หน้าล็อกอิน</title>
+  <title>login</title>
 </head>
 
 <body>
@@ -44,7 +44,7 @@ session_start();
                 <input type="password" name="ctm_password" class="form-control" />
               </div>
               <div class="text-center">
-                <button type="submit" name="login" class="btn btn-primary btn-block my-3">เข้าสู่ระบบ</button>
+                <button type="submit" name="login" class="btn btn-warning btn-block my-3">เข้าสู่ระบบ</button>
                 <a href="register.php" class="nav-link">
                   <h5>สมัครสมาชิกก่อนเข้าสู่ระบบ</h5>
                 </a>
