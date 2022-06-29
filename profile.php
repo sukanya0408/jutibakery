@@ -66,7 +66,7 @@ if (!isset($_SESSION['is_login'])) {
                 <input type="text" name="ctm_address" class="form-control" value="<?= $row['ctm_address'] ?>" readonly />
               </div>
               <div class="mb-3">
-                <button type="submit" name="#" class="btn btn-primary">แก้ไขข้อมูล</button>
+                <button type="submit" name="#" class="btn btn-warning">แก้ไขข้อมูล</button>
                 <a href="index_ctm.php" class="btn btn-danger">ยกเลิก</a>
               </div>
             </form>

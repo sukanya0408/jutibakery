@@ -26,8 +26,12 @@ session_start();
                         <form action="product_crud.php" method="POST">
                         <div class="col mb-3">
                             <div class="col mb-2">
-                                <label>ชื่อประเภทสินค้า:</label>
+                                <label>ประเภทเบเกอรี่:</label>
                                 <input type="text" name="product_type_name" class="form-control" />
+                            </div>
+                            <div class="col mb-2">
+                                <label>รูปภาพประเภทเบเกอรี่:</label>
+                                <input type="file" name="pd_image" class="form-control" />
                             </div>
                             <div class="mb-3">
                                 <button type="submit" name="save_product" class="btn btn-primary">เพิ่มประเภทสินค้า</button>

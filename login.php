@@ -31,7 +31,7 @@ session_start();
             <?php echo $_SESSION['error_pass']; ?>
           </div>
         <?php endif; ?>
-        <div class="card border-0 shadow">
+        <div class="card border-5 shadow">
           <div class="card-body">
             <h1 class="card-title text-center">LOGIN</h1>
             <form action="login_db.php" method="POST">

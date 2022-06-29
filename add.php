@@ -54,7 +54,7 @@ session_start();
                                 <input type="text" name="ctm_address" class="form-control" />
                             </div>
                             <div class="mb-3">
-                                <button type="submit" name="save_cus" class="btn btn-primary">เพิ่มข้อมูล</button>
+                                <button type="submit" name="save_cus" class="btn btn-warning">เพิ่มข้อมูล</button>
                                 <a href="customer.php" class="btn btn-danger">ย้อนกลับ</a>
                             </div>
                         </form>

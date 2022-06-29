@@ -4,12 +4,14 @@ include('conn.php');
 
 if (isset($_POST['save_product'])) {
     $product_type_name = $_POST['product_type_name'];
+    $pd_image = $_POST['pd_image'];
 
-    $query = "INSERT INTO product_type(product_type_name) VALUES(:product_type_name)";
+    $query = "INSERT INTO product_type(product_type_name,pd_image) VALUES(:product_type_name,:pd_image)";
     $query_run = $conn->prepare($query);
 
     $data = [
-        ':product_type_name' => $product_type_name
+        ':product_type_name' => $product_type_name,
+        ':pd_image' => $pd_image
     ];
     $query_execute = $query_run->execute($data);
     if ($query_execute) {
@@ -26,13 +28,16 @@ if (isset($_POST['save_product'])) {
 if (isset($_POST['product_edit'])) {
     $product_type_id = $_POST['product_type_id'];
     $product_type_name = $_POST['product_type_name'];
+    $pd_image = $_POST['pd_image'];
+
     try {
-        $query = "UPDATE product_type SET product_type_name = :product_type_name WHERE product_type_id = :product_type_id";
+        $query = "UPDATE product_type SET product_type_name = :product_type_name , pd_image = :pd_image WHERE product_type_id = :product_type_id";
         $stmt = $conn->prepare($query);
 
         $data = [
             ':product_type_id' => $product_type_id,
-            ':product_type_name' => $product_type_name
+            ':product_type_name' => $product_type_name,
+            ':pd_image' => $pd_image
         ];
         $query_execute = $stmt->execute($data);
         if ($query_execute) {

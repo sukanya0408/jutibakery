@@ -12,7 +12,7 @@ if (!isset($_SESSION['is_login'])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>หน้าแรกลูกค้า</title>
+  <title>Home page</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <?php include 'navbar/nav_cus.php' ?>
 </head>
@@ -21,28 +21,22 @@ if (!isset($_SESSION['is_login'])) {
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="mt-5">Home Page</h1>
-        <div class="card mt-5 text-center">
+        <h5 class="mt-5">ประเภทเบเกอรี่</h5>
+        <div class="card mt-6 text-center">
           <div class="card-body">
 
             <?php
             require 'conn.php';
-            $sql = "SELECT * FROM bakery";
+            $sql = "SELECT * FROM product_type";
             $stmt = $conn->query($sql);
             $result = $stmt->fetchAll();
             foreach ($result as $row) {
             ?>
-              <div class="col-sm-3" style="margin-bottom:50px;">
-                <img src="image/<?= $row['bk_image']; ?>" width="100%"><br>
-                <b><?= $row['bk_name']; ?></b>
-                <b>ประเภท <?= $row['product_type_id']; ?> </b><br>
-                ราคา <?= $row['bk_price']; ?>
-                วันที่เพิ่มสินค้า <?= $row['update_date']; ?>
-                วันหมดอายุ <?= $row['expire_date']; ?> <br>
-                <?php if ($row['bk_name'] > 0) {
-                  echo '<a href="#" style="width:100%" class="btn btn-success btn-sm">จอง</a>';
-                } else 
-                ?>
+              <div class="col-sm-2" style="margin-bottom:50px;">
+                <img src="image/<?= $row['pd_image']; ?>" width="100%"><br>
+                <b><?= $row['product_type_name']; ?></b> 
+            </br>
+            <a class="btn btn-primary" disabled href="#" role="button">คลิ๊ก</a>
               </div>
             <?php } ?>
           </div>

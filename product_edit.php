@@ -38,9 +38,13 @@ include('conn.php');
                         <form action="product_crud.php" method="POST">
                             <input type="hidden" name="product_type_id" value="<?= $result['product_type_id'] ?>">
                             <div class="mb-3">
-                                <label>ประเภทสินค้า:</label>
+                                <label>ประเภทเบเกอรี่:</label>
                                 <input type="text" name="product_type_name" class="form-control" value="<?= $result['product_type_name'] ?>" />
-                            </div>                         
+                            </div>    
+                            <div class="mb-3">
+                                <label>รูปภาพประเภทเบเกอรี่:</label>
+                                <input type="file" name="pd_image" class="form-control" value="<?= $result['pd_image'] ?>" />
+                            </div>                     
                             <div class="mb-3">
                                 <button type="submit" name="product_edit" class="btn btn-primary">แก้ไขประเภทสินค้า</button>
                             </div>
