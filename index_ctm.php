@@ -32,11 +32,11 @@ if (!isset($_SESSION['is_login'])) {
             $result = $stmt->fetchAll();
             foreach ($result as $row) {
             ?>
-              <div class="col-sm-2" style="margin-bottom:50px;">
+              <div class="col-sm-6" style="float:left; width: 300px;">
                 <img src="image/<?= $row['pd_image']; ?>" width="80%"><br>
                 <b><?= $row['product_type_name']; ?></b> 
             </br>
-            <a class="btn btn-primary" disabled href="#" role="button">คลิ๊ก</a>
+            <a class="btn btn-primary"style="width:60%" disabled href="#" role="button">เลือกสินค้า</a>
               </div>
             <?php } ?>
           </div>

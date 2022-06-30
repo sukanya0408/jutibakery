@@ -44,12 +44,13 @@ if (isset($_POST['edit'])) {
     $ctm_phone = $_POST['ctm_phone'];
     $ctm_user = $_POST['ctm_user'];
     $ctm_password = $_POST['ctm_password'];
-    try {
+  
         try {
             $ctm_password = password_hash($ctm_password, PASSWORD_DEFAULT);
-            $query = "UPDATE customer SET ctm_name = :ctm_name, ctm_sname = :ctm_sname, ctm_address = :ctm_address,ctm_email = :ctm_email, ctm_phone = :ctm_phone, ctm_user = :ctm_user, ctm_password = :ctm_password WHERE customer_id = :customer_id";
+            $query = "UPDATE customer SET ctm_name = :ctm_name, ctm_sname = :ctm_sname, ctm_address = :ctm_address, ctm_email = :ctm_email, ctm_phone = :ctm_phone, ctm_user = :ctm_user, ctm_password = :ctm_password WHERE customer_id = :customer_id";
             $stmt = $conn->prepare($query);
         $data = [
+            ':customer_id' => $customer_id,
             ':ctm_name' => $ctm_name,
             ':ctm_sname' => $ctm_sname,
             ':ctm_address' => $ctm_address,
@@ -97,4 +98,3 @@ if (isset($_POST['delete_cus'])) {
         echo $e->getMessage();
     }
     }
-}

@@ -35,7 +35,6 @@ session_start();
                                 <tr>
                                     <th>ลำดับ</th>
                                     <th>ประเภทเบเกอรี่</th>
-                                    <th>รูปภาพประเภทเบเกอรี่</th>
                                     <th>แก้ไข</th>
                                     <th>ลบ</th>
                                 </tr>
@@ -51,7 +50,6 @@ session_start();
                                     <tr>
                                         <td><?= $i++; ?></td>
                                         <td><?= $row['product_type_name']; ?></td>
-                                        <td><?= $row['pd_image']; ?></td>
                                         <td><a href="product_edit.php?product_type_id=<?= $row['product_type_id'] ?>" class="btn btn-primary">แก้ไข</a></td>
                                         <td>
                                             <form action="product_crud.php" method="POST">

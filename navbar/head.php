@@ -19,7 +19,7 @@
           <a class="nav-link" href="#">รายการสั่งซื้อ</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">การแจ้งชำระเงิน</a>
+          <a class="nav-link" href="transfer_list.php">การแจ้งชำระเงิน</a>
         </li>
       </ul>
     </div>

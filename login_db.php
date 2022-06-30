@@ -8,7 +8,7 @@ if (isset($_POST['login'])) {
 }
 if (empty($ctm_user) || empty($ctm_password)) {
     $_SESSION['error_fill'] = "กรุณากรอกข้อมูลให้ครบถ้วน";
-    header("Location: Login.php");
+    header("Location: login.php");
     exit;
 } else {
     $select_stmt = $conn->prepare("SELECT COUNT(ctm_user) AS count_user, ctm_password FROM customer WHERE ctm_user = :ctm_user");
@@ -18,7 +18,7 @@ if (empty($ctm_user) || empty($ctm_password)) {
 
     if ($row['count_user'] == 0) {
         $_SESSION['error_user'] = "ชื่อผู้ใช้นี้ไม่มีผู้ใช้ในระบบ";
-        header("Location: Login.php");
+        header("Location: login.php");
         exit;
     } else {
         if (password_verify($ctm_password, $row['ctm_password'])) {
