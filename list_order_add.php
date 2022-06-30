@@ -31,7 +31,7 @@ session_start();
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label">วันที่สั่งซื้อ :</label>
-                                <input type="text" name="order_date" class="form-control" />
+                                <input type="date" name="order_date" class="form-control" />
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label">จำนวนที่สั่งซื้อ :</label>

@@ -36,7 +36,7 @@ if (!isset($_SESSION['is_login'])) {
                 <img src="image/<?= $row['pd_image']; ?>" width="80%"><br>
                 <b><?= $row['product_type_name']; ?></b> 
             </br>
-            <a class="btn btn-primary"style="width:60%" disabled href="#" role="button">เลือกสินค้า</a>
+            <a class="btn btn-primary"style="width:60%" disabled href="list_order_add.php" role="button">เลือกสินค้า</a>
               </div>
             <?php } ?>
           </div>

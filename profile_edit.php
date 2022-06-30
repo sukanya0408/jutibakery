@@ -62,7 +62,7 @@ session_start();
                                         <td><?= $row['ctm_email']; ?></td>
                                         <td><a href="edit.php?customer_id=<?= $row['customer_id'] ?>" class="btn btn-primary">แก้ไข</a></td>
                                         <td>
-                                            <form action="crud.php" method="POST">
+                                            <form action="customer.php" method="POST">
                                                 <button type="submit" name="delete_cus" value="<?= $row['customer_id'] ?>" class="btn btn-danger">ลบ</button>
                                             </form>
                                         </td>

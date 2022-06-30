@@ -10,6 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>สั่งซื้อสินค้า</title>
+    <?php require_once 'navbar/head.php' ?>
 </head>
 
 <body>
