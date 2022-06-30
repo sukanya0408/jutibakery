@@ -37,7 +37,7 @@ if (isset($_POST['regis'])) {
       $insert_stmt->execute();
 
       if ($insert_stmt) {
-        $_SESSION['ctm_user'] = $ctm_userss;
+        $_SESSION['ctm_user'] = $ctm_user;
         $_SESSION['is_login'] = true;
         header("Location: index_ctm.php");
       } else {

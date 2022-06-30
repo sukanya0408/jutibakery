@@ -47,11 +47,11 @@ if (!isset($_SESSION['is_login'])) {
               </div>
               <div class="col-md-6">
                 <label class="form-label">ชื่อผู้ใช้ :</label>
-                <input type="text" name="ctm_username" class="form-control" value="<?= $row['ctm_username'] ?>" readonly />
+                <input type="text" name="ctm_user" class="form-control" value="<?= $row['ctm_user'] ?>" readonly />
               </div>
               <div class="col-md-6">
                 <label class="form-label">รหัสผ่าน :</label>
-                <input type="password" name="password_c" class="form-control" value="<?= $row['password_c'] ?>" readonly />
+                <input type="password" name="ctm_password" class="form-control" value="<?= $row['ctm_password'] ?>" readonly />
               </div>
               <div class="col-md-4">
                 <label class="form-label">เบอร์โทรศัพท์:</label>
@@ -59,7 +59,7 @@ if (!isset($_SESSION['is_login'])) {
               </div>
               <div class="col-md-8">
                 <label class="form-label">อีเมล:</label>
-                <input type="text" name="ctm_email" class="form-control" value="<?= $row['ctm_username'] ?>" readonly />
+                <input type="text" name="ctm_email" class="form-control" value="<?= $row['ctm_email'] ?>" readonly />
               </div>
               <div class="col-12">
                 <label class="form-label">ที่อยู่:</label>

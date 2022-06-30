@@ -33,7 +33,7 @@ if (!isset($_SESSION['is_login'])) {
             foreach ($result as $row) {
             ?>
               <div class="col-sm-2" style="margin-bottom:50px;">
-                <img src="image/<?= $row['pd_image']; ?>" width="100%"><br>
+                <img src="image/<?= $row['pd_image']; ?>" width="80%"><br>
                 <b><?= $row['product_type_name']; ?></b> 
             </br>
             <a class="btn btn-primary" disabled href="#" role="button">คลิ๊ก</a>
