@@ -36,7 +36,33 @@ if (!isset($_SESSION['is_login'])) {
                 <img src="image/<?= $row['pd_image']; ?>" width="80%"><br>
                 <b><?= $row['product_type_name']; ?></b> 
             </br>
-            <a class="btn btn-primary"style="width:60%" disabled href="list_order_add.php" role="button">เลือกสินค้า</a>
+            <a class="btn btn-primary"style="width:50%" disabled href="list_order_add.php" role="button">เลือกสินค้า</a>
+              </div>
+            <?php } ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h5 class="mt-5">เบเกอรี่แนะนำ</h5>
+        <div class="card mt-6 text-center">
+          <div class="card-body">
+
+            <?php
+            require 'conn.php';
+            $sql = "SELECT * FROM bakery";
+            $stmt = $conn->query($sql);
+            $result = $stmt->fetchAll();
+            foreach ($result as $row) {
+            ?>
+              <div class="col-sm-6" style="float:left; width: 300px;">
+                <img src="image/<?= $row['bk_image']; ?>" width="80%"><br>
+                <b><?= $row['bk_name']; ?></b> 
+            </br>
+            <a class="btn btn-primary"style="width:50%" disabled href="#" role="button">สั่งซื้อ</a>
               </div>
             <?php } ?>
           </div>

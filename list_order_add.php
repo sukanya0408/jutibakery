@@ -25,9 +25,20 @@ session_start();
                 <div class="card border-0">
                     <div class="card-body">
                         <form action="list_order_crud.php" method="POST" class="row g-3">
+                            <div>
+                                        <select class="form-select" name="bakery" id="bakery">
+                                            <?php
+                                            require 'conn.php';
+                                            $stmt = $conn->query("select bk_name, bk_price from bakery WHERE bk_name IN ('เค้กส้ม','ขนมปังสังขยา')");
+                                            while ($row = $stmt->fetch()) {
+                                            ?>
+                                                <option value="<?= $row['bk_id'] ?>"><?= $row['bk_name'] ?></option>
+                                            <?php }  ?>
+                                        </select>
+                                    </div>
                             <div class="col-md-6">
-                                <label class="form-label">ชื่อเบเกอรี่ :</label>
-                                <input type="text" name="bk_name" class="form-control" />
+                                <label class="form-label">ราคา :</label>
+                                <input type="text" name="bk_price" class="form-control" />
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label">วันที่สั่งซื้อ :</label>
@@ -37,12 +48,8 @@ session_start();
                                 <label class="form-label">จำนวนที่สั่งซื้อ :</label>
                                 <input type="text" name="tatal_bk" class="form-control" />
                             </div>
-                            <div class="col-md-6">
-                                <label class="form-label">ราคาสินค้าทั้งหมด :</label>
-                                <input type="text" name="total_price" class="form-control" />
-                            </div>
                             <div class="mb-3">
-                                <button type="submit" name="save_list_order" class="btn btn-primary">เพิ่มรายการสั่งซื้อ</button>
+                                <button type="submit" name="save_list_order" class="btn btn-primary">ทำรายการสั่งซื้อ</button>
                                 <a href="list_order.php" class="btn btn-danger">ย้อนกลับ</a>
                             </div>
                         </form>

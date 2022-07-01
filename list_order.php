@@ -37,7 +37,6 @@ session_start();
                                     <th>ชื่อเบเกอรี่</th>
                                     <th>วันที่สั่งซื้อ</th>
                                     <th>จำนวนที่สั่งซื้อ</th>
-                                    <th>ราคาสินค้าทั้งหมด</th>
                                     <th>แก้ไข</th>
                                     <th>ลบ</th>
                                 </tr>
@@ -55,7 +54,6 @@ session_start();
                                         <td><?= $row['bk_name']; ?></td>
                                         <td><?= $row['order_date']; ?></td>
                                         <td><?= $row['tatal_bk']; ?></td>
-                                        <td><?= $row['tatal_price']; ?></td>
                                         <td><a href="list_order_edit.php?order_id=<?= $row['order_id'] ?>" class="btn btn-primary">แก้ไข</a></td>
                                         <td>
                                             <form action="list_order_crud.php" method="POST">

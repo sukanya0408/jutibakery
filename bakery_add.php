@@ -33,10 +33,17 @@ session_start();
                                 <label>ราคา:</label>
                                 <input type="text" name="bk_price" class="form-control" />
                             </div>
-                            <div class="col mb-2">
-                                <label>รหัสสินค้า:</label>
-                                <input type="text" name="product_type_id" class="form-control" />
-                            </div>
+                            <div>
+                                        <select class="form-select" name="product_type" id="product_type">
+                                            <?php
+                                            require 'conn.php';
+                                            $stmt = $conn->query("select product_type_name from product_type WHERE product_type_name IN ('ขนมปัง','คุกกี้','เค้ก','พาย')");
+                                            while ($row = $stmt->fetch()) {
+                                            ?>
+                                                <option value="<?= $row['product_type_id'] ?>"><?= $row['product_type_name'] ?></option>
+                                            <?php }  ?>
+                                        </select>
+                                    </div>
                             <div class="col mb-2">
                                 <label>รูปภาพเบเกอรี่:</label>
                                 <input type="file" name="bk_image" class="form-control" />

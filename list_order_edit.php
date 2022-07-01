@@ -42,16 +42,16 @@ include('conn.php');
                                 <input type="text" name="bk_name" class="form-control" value="<?= $result['bk_name'] ?>" />
                             </div>
                             <div class="mb-3">
+                                <label>ราคา:</label>
+                                <input type="text" name="bk_price" class="form-control" value="<?= $result['bk_price'] ?>" />
+                            </div>
+                            <div class="mb-3">
                                 <label>วันที่สั่งซื้อ:</label>
                                 <input type="text" name="order_date" class="form-control" value="<?= $result['order_date'] ?>" />
                             </div>
                             <div class="mb-3">
                                 <label>จำนวนที่สั่งซื้อ:</label>
                                 <input type="text" name="tatal_bk" class="form-control" value="<?= $result['tatal_bk'] ?>" />
-                            </div>
-                            <div class="mb-3">
-                                <label>ราคาสินค้าทั้งหมด:</label>
-                                <input type="text" name="total_price" class="form-control" value="<?= $result['total_price'] ?>" />
                             </div>
                             <div class="mb-3">
                                 <button type="submit" name="list_order_edit" class="btn btn-primary">เพิ่มข้อมูล</button>

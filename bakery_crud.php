@@ -5,17 +5,17 @@ include('conn.php');
 if (isset($_POST['save_bakery'])) {
     $bk_name = $_POST['bk_name'];
     $bk_price = $_POST['bk_price'];
-    $product_type_id = $_POST['product_type_id'];
+    $product_type_name = $_POST['product_type_name'];
     $bk_image = $_POST['bk_image'];
     $update_date = $_POST['update_date'];
     $expire_date = $_POST['expire_date'];
-    $query = "INSERT INTO bakery(bk_name,bk_price,product_type_id,bk_image,update_date,expire_date) VALUES(:bk_name,:bk_price,:product_type_id,:bk_image,:update_date,:expire_date)";
+    $query = "INSERT INTO bakery(bk_name,bk_price,product_type_name,bk_image,update_date,expire_date) VALUES(:bk_name,:bk_price,:product_type_name,:bk_image,:update_date,:expire_date)";
     $query_run = $conn->prepare($query);
 
     $data = [
         ':bk_name' => $bk_name,
         ':bk_price' => $bk_price,
-        ':product_type_id' => $product_type_id,
+        ':product_type_name' => $product_type_name,
         ':bk_image' => $bk_image,
         ':update_date' => $update_date,
         ':expire_date' => $expire_date
@@ -36,19 +36,19 @@ if (isset($_POST['bakery_edit'])) {
     $bk_id = $_POST['bk_id'];
     $bk_name = $_POST['bk_name'];
     $bk_price = $_POST['bk_price'];
-    $product_type_id = $_POST['product_type_id'];
+    $product_type_name = $_POST['product_type_name'];
     $bk_image = $_POST['bk_image'];
     $update_date = $_POST['update_date'];
     $expire_date = $_POST['expire_date'];
     try {
-        $query = "UPDATE bakery SET bk_name = :bk_name, bk_price = :bk_price, product_type_id = :product_type_id, bk_image = :bk_image, update_date = :update_date, expire_date = :expire_date WHERE bk_id = :bk_id";
+        $query = "UPDATE bakery SET bk_name = :bk_name, bk_price = :bk_price, product_type_name = :product_type_name, bk_image = :bk_image, update_date = :update_date, expire_date = :expire_date WHERE bk_id = :bk_id";
         $stmt = $conn->prepare($query);
 
         $data = [
             ':bk_id' => $bk_id,
             ':bk_name' => $bk_name,
             ':bk_price' => $bk_price,
-            ':product_type_id' => $product_type_id,
+            ':product_type_name' => $product_type_name,
             ':bk_image' => $bk_image,
             ':update_date' => $update_date,
             ':expire_date' => $expire_date

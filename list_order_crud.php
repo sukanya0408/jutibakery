@@ -5,17 +5,17 @@ include('conn.php');
 if (isset($_POST['save_list_order'])) {
     
     $bk_name = $_POST['bk_name'];
+    $bk_price = $_POST['bk_price'];
     $order_date = $_POST['order_date'];
     $tatal_bk = $_POST['tatal_bk'];
-    $total_price = $_POST['total_price'];
-    $query = "INSERT INTO list_order (bk_name,order_date,tatal_bk,total_price) VALUES(:bk_name,:order_date,:tatal_bk,:total_price)";
+    $query = "INSERT INTO list_order (bk_name,bk_price,order_date,tatal_bk) VALUES(:bk_name,:bk_price,:order_date,:tatal_bk)";
     $query_run = $conn->prepare($query);
 
     $data = [
         ':bk_name' => $bk_name,
+        ':bk_price' => $bk_price,
         ':order_date' => $order_date,
-        ':tatal_bk' => $tatal_bk,
-        ':total_price' => $total_price
+        ':tatal_bk' => $tatal_bk
     ];
     $query_execute = $query_run->execute($data);
     if ($query_execute) {
@@ -31,19 +31,19 @@ if (isset($_POST['save_list_order'])) {
 
 if (isset($_POST['list_order_edit'])) {
     $bk_name = $_POST['bk_name'];
+    $bk_price = $_POST['bk_price'];
     $order_date = $_POST['order_date'];
     $tatal_bk = $_POST['tatal_bk'];
-    $total_price = $_POST['total_price'];
     try {
-        $query = "UPDATE list_order SET bk_name = :bk_name, order_date = :order_date, tatal_bk = :tatal_bk, total_price = :total_price WHERE order_id = :order_id";
+        $query = "UPDATE list_order SET bk_name = :bk_name,bk_price = :bk_price, order_date = :order_date, tatal_bk = :tatal_bk WHERE order_id = :order_id";
         $stmt = $conn->prepare($query);
 
         $data = [
             ':order_id' => $order_id,
             ':bk_name' => $bk_name,
+            ':bk_price' => $bk_price,
             ':order_date' => $order_date,
-            ':tatal_bk' => $tatal_bk,
-            ':total_price' => $total_price
+            ':tatal_bk' => $tatal_bk
         ];
         $query_execute = $stmt->execute($data);
         if ($query_execute) {
