@@ -34,6 +34,7 @@ session_start();
                                 <input type="text" name="bk_price" class="form-control" />
                             </div>
                             <div>
+                                        <label>ประเภทสินค้า:</label>
                                         <select class="form-select" name="product_type" id="product_type">
                                             <?php
                                             require 'conn.php';
