@@ -9,7 +9,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>สั่งซื้อสินค้า</title>
+    <title>สั่งซื้อสินค้า1223</title>
     <?php require_once 'navbar/head.php' ?>
 </head>
 
