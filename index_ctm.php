@@ -21,7 +21,7 @@ if (!isset($_SESSION['is_login'])) {
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h5 class="mt-5">ประเภทเบเกอรี่</h5>
+        <h3 class="mt-5">ประเภทเบเกอรี่</h3>
         <div class="card mt-6 text-center">
           <div class="card-body">
 
@@ -47,7 +47,7 @@ if (!isset($_SESSION['is_login'])) {
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h5 class="mt-5">เบเกอรี่แนะนำ</h5>
+        <h3 class="mt-5">เบเกอรี่แนะนำ</h3>
         <div class="card mt-6 text-center">
           <div class="card-body">
 

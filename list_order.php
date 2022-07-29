@@ -9,7 +9,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>สั่งซื้อสินค้า1223</title>
+    <title>รายการสั่งซื้อ</title>
     <?php require_once 'navbar/head.php' ?>
 </head>
 
@@ -25,9 +25,7 @@ session_start();
                 ?>
                 <div class="card">
                     <div class="card-body">
-                        <h3>ทำรายการสั่งซื้อ
-                            <a href="list_order_add.php" class="btn btn-primary float-end">เพิ่มรายการสั่งซื้อ</a>
-                        </h3>
+                        <h3>ราายการสั่งซื้อ</h3>
                     </div>
                     <div class="card-body">
                         <table id="example" class="table table-borderless table-hover">

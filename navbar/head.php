@@ -16,7 +16,7 @@
           <a class="nav-link" href="bakery.php">ข้อมูลเบเกอรี่</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#.php">รายการสั่งซื้อ</a>
+          <a class="nav-link" href="list_order.php">รายการสั่งซื้อ</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#.php">การแจ้งชำระเงิน</a>

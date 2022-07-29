@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <title>ล็อกอิน</title>
+    <title>Login</title>
 </head>
 
 <body>
@@ -33,18 +33,18 @@
                 <?php endif; ?>
                 <div class="card border-0 shadow">
                     <div class="card-body">
-                        <h1 class="card-title text-center">LOGIN</h1>
+                        <h1 class="card-title text-center">JUTI BAKERY</h1>
                         <form action="login_db.php" method="POST">
                             <div class="col-12 mt-2">
-                                <label class="form-label">ชื่อผู้ใช้ :</label>
+                                <label class="form-label">Username :</label>
                                 <input type="text" name="ctm_user" class="form-control" />
                             </div>
                             <div class="col-12 mt-2">
-                                <label class="form-label">รหัสผ่าน :</label>
+                                <label class="form-label">Password :</label>
                                 <input type="password" name="ctm_password" class="form-control" />
                             </div>
                             <div class="text-center">
-                                <button type="submit" name="login" class="btn btn-primary btn-block my-3">เข้าสู่ระบบ</button>
+                                <button type="submit" name="login" class="btn btn-primary btn-block my-3">Login</button>
                                 <a href="register.php" class="nav-link">
                                     <h6>สมัครสมาชิกก่อนเข้าสู่ระบบ!!</h6>
                                 </a>
