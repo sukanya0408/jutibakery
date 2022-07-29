@@ -46,8 +46,8 @@ include('conn.php');
                                 <input type="text" name="bk_price" class="form-control" value="<?= $result['bk_price'] ?>" />
                             </div>
                             <div class="mb-3">
-                                <label>ชื่อประเภทสินค้า:</label>
-                                <input type="text" name="product_type_name" class="form-control" value="<?= $result['product_type_name'] ?>" />
+                                <label>ประเภทสินค้า:</label>
+                                <input type="text" name="product_type_id" class="form-control" value="<?= $result['product_type_id'] ?>" />
                             </div>
                             <div class="mb-3">
                                 <label>รูปภาพเบเกอรี่:</label>
