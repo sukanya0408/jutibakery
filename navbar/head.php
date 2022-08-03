@@ -19,7 +19,7 @@
           <a class="nav-link" href="list_order.php">รายการสั่งซื้อ</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#.php">การแจ้งชำระเงิน</a>
+          <a class="nav-link" href="check_payment.php">การแจ้งชำระเงิน</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="logout_ad.php">logout</a>

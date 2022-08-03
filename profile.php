@@ -39,11 +39,11 @@ if (!isset($_SESSION['is_login'])) {
               <input type="hidden" name="customer_id" value="<?= $row['customer_id'] ?>">
               <div class="col-md-6">
                 <label class="form-label">ชื่อ :</label>
-                <input type="text" name="ctm_name" class="form-control" value="<?= $row['ctm_name'] ?>" readonly />
+                <input type="text" name="ctm_name" class="form-control" value="<?= $row['ctm_name'] ?>"  />
               </div>
               <div class="col-md-6">
                 <label class="form-label">นามสกุล :</label>
-                <input type="text" name="ctm_sname" class="form-control" value="<?= $row['ctm_sname'] ?>" readonly />
+                <input type="text" name="ctm_sname" class="form-control" value="<?= $row['ctm_sname'] ?>"  />
               </div>
               <div class="col-md-6">
                 <label class="form-label">ชื่อผู้ใช้ :</label>
@@ -51,19 +51,19 @@ if (!isset($_SESSION['is_login'])) {
               </div>
               <div class="col-md-6">
                 <label class="form-label">รหัสผ่าน :</label>
-                <input type="password" name="ctm_password" class="form-control" value="<?= $row['ctm_password'] ?>" readonly />
+                <input type="password" name="ctm_password" class="form-control" value="<?= $row['ctm_password'] ?>"  />
               </div>
               <div class="col-md-4">
                 <label class="form-label">เบอร์โทรศัพท์:</label>
-                <input type="text" name="ctm_phone" class="form-control" value="<?= $row['ctm_phone'] ?>" readonly />
+                <input type="text" name="ctm_phone" class="form-control" value="<?= $row['ctm_phone'] ?>"  />
               </div>
               <div class="col-md-8">
                 <label class="form-label">อีเมล:</label>
-                <input type="text" name="ctm_email" class="form-control" value="<?= $row['ctm_email'] ?>" readonly />
+                <input type="text" name="ctm_email" class="form-control" value="<?= $row['ctm_email'] ?>"  />
               </div>
               <div class="col-12">
                 <label class="form-label">ที่อยู่:</label>
-                <input type="text" name="ctm_address" class="form-control" value="<?= $row['ctm_address'] ?>" readonly />
+                <input type="text" name="ctm_address" class="form-control" value="<?= $row['ctm_address'] ?>"  />
               </div>
               <div class="mb-3">
                 <button type="submit" name="edit" class="btn btn-warning">แก้ไขข้อมูล</button>

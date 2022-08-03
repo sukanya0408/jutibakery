@@ -32,7 +32,7 @@ if (!isset($_SESSION['is_login'])) {
             $result = $stmt->fetchAll();
             foreach ($result as $row) {
             ?>
-              <div class="col-sm-6" style="float:left; width: 300px;">
+              <div class="col-sm-6" style="float:left; width: 200px;">
                 <img src="image/<?= $row['pd_image']; ?>" width="80%"><br>
                 <b><?= $row['product_type_name']; ?></b> 
             </br>
@@ -58,11 +58,11 @@ if (!isset($_SESSION['is_login'])) {
             $result = $stmt->fetchAll();
             foreach ($result as $row) {
             ?>
-              <div class="col-sm-6" style="float:left; width: 300px;">
+              <div class="col-sm-6" style="float:left; width: 200px;">
                 <img src="image/<?= $row['bk_image']; ?>" width="80%"><br>
                 <b><?= $row['bk_name']; ?></b> 
             </br>
-            <a class="btn btn-primary"style="width:50%" disabled href="#" role="button">สั่งซื้อ</a>
+            <a class="btn btn-primary"style="width:50%" disabled href="list_order_add.php" role="button">สั่งซื้อ</a>
               </div>
             <?php } ?>
           </div>

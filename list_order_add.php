@@ -50,7 +50,7 @@ session_start();
                             </div>
                             <div class="mb-3">
                                 <button type="submit" name="save_list_order" class="btn btn-primary">ทำรายการสั่งซื้อ</button>
-                                <a href="list_order.php" class="btn btn-danger">ย้อนกลับ</a>
+                                <a href="index_ctm.php" class="btn btn-danger">ย้อนกลับ</a>
                             </div>
                         </form>
                     </div>

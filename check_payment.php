@@ -25,22 +25,18 @@ session_start();
                 ?>
                 <div class="card">
                     <div class="card-body">
-                        <h3>ข้อมูลเบเกอรี่
-                            <a href="bakery_add.php" class="btn btn-primary float-end">เพิ่มข้อมูล</a>
-                        </h3>
+                        <h3>การแจ้งชำระเงิน</h3>
                     </div>
                     <div class="card-body">
                         <table id="example" class="table table-borderless table-hover">
                             <thead class="table-warning";>
                                 <tr>
                                     <th>ลำดับ</th>
-                                    <th>ผลการชำระเงิน</th>
+                                    <th>ชื่อผู้ใช้</th>
                                     <th>จำนวนเงินที่โอน</th>
                                     <th>ธนาคารที่โอน</th>
                                     <th>วันที่ชำระเงิน</th>
-                                    <th>รหัสลูกค้า</th>
-                                    <th>แก้ไข</th>
-                                    <th>ลบ</th>
+                                     <th>ผลการชำระเงิน</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -57,7 +53,7 @@ session_start();
                                         <td><?= $row['amount']; ?></td>
                                         <td><?= $row['bankaccount']; ?></td>                                      
                                         <td><?= $row['payment_date']; ?></td>
-                                        <td><?= $row['ctm_id']; ?></td>
+                                        <td><?= $row['ctm_user']; ?></td>
                                         <td><a href="bakery_edit.php?bk_id=<?= $row['bk_id'] ?>" class="btn btn-primary">แก้ไข</a></td>
                                         <td>
                                             <form action="bakery_crud.php" method="POST">
