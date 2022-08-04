@@ -46,6 +46,10 @@ session_start();
                                         </select>
                                     </div>
                             <div class="col mb-2">
+                                <label>จำนวนเบเกอรี่:</label>
+                                <input type="text" name="bk_number" class="form-control" />
+                            </div>
+                            <div class="col mb-2">
                                 <label>รูปภาพเบเกอรี่:</label>
                                 <input type="file" name="bk_image" class="form-control" />
                             </div>

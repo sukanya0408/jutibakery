@@ -25,7 +25,7 @@ session_start();
                 ?>
                 <div class="card">
                     <div class="card-body">
-                        <h3>ราายการสั่งซื้อ</h3>
+                        <h3>รายการสั่งซื้อ</h3>
                     </div>
                     <div class="card-body">
                         <table id="example" class="table table-borderless table-hover">

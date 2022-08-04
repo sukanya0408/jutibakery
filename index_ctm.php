@@ -20,7 +20,7 @@ if (!isset($_SESSION['is_login'])) {
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-8">
         <h3 class="mt-5">ประเภทเบเกอรี่</h3>
         <div class="card mt-6 text-center">
           <div class="card-body">
@@ -60,9 +60,9 @@ if (!isset($_SESSION['is_login'])) {
             ?>
               <div class="col-sm-6" style="float:left; width: 200px;">
                 <img src="image/<?= $row['bk_image']; ?>" width="80%"><br>
-                <b><?= $row['bk_name']; ?></b> 
+                <?= $row['bk_name'];  ?> <br>ราคา<?= $row['bk_price']; ?>บาท</br>
             </br>
-            <a class="btn btn-primary"style="width:50%" disabled href="list_order_add.php" role="button">สั่งซื้อ</a>
+            <a class="btn btn-primary"style="width:50%" disabled href="my_basket.php?bk_id=<?php echo $result['bk_id'];?>" role="button">สั่งซื้อ</a>
               </div>
             <?php } ?>
           </div>
