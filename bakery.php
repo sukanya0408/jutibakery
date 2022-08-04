@@ -34,9 +34,11 @@ session_start();
                             <thead class="table-warning";>
                                 <tr>
                                     <th>ลำดับ</th>
+                                    <th>รูปภาพเบเกอรี่</th>
                                     <th>ชื่อเบเกอรี่</th>
                                     <th>ราคา</th>
                                     <th>ประเภทสินค้า</th>
+                                    <th>จำนวนเบเกอรี่</th>
                                     <th>วันที่เพิ่มสินค้า</th>
                                     <th>วันหมดอายุ</th>
                                     <th>แก้ไข</th>
@@ -53,9 +55,11 @@ session_start();
                                 ?>
                                     <tr>
                                         <td><?= $i++; ?></td>
+                                        <td></td>
                                         <td><?= $row['bk_name']; ?></td>
                                         <td><?= $row['bk_price']; ?></td>
                                         <td><?= $row['product_type_id']; ?></td>
+                                        <td><?= $row['bk_number']; ?></td>
                                         <td><?= $row['update_date']; ?></td>
                                         <td><?= $row['expire_date']; ?></td>
                                         <td><a href="bakery_edit.php?bk_id=<?= $row['bk_id'] ?>" class="btn btn-primary">แก้ไข</a></td>
