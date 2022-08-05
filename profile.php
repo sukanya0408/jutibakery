@@ -33,9 +33,15 @@ if (!isset($_SESSION['is_login'])) {
     </div>
     <div class="row">
       <div class="col mt-4">
+          <?php if (isset($_SESSION['message'])) : ?>
+                    <h5 class="alert alert-success"><?= $_SESSION['message']; ?></h5>
+                <?php
+                    unset($_SESSION['message']);
+                endif;
+                ?>
         <div class="card border-0">
           <div class="card-body">
-            <form action="#" method="POST" class="row g-3">
+            <form action="profile_edit.php" method="POST" class="row g-3">
               <input type="hidden" name="customer_id" value="<?= $row['customer_id'] ?>">
               <div class="col-md-6">
                 <label class="form-label">ชื่อ :</label>
@@ -66,7 +72,7 @@ if (!isset($_SESSION['is_login'])) {
                 <input type="text" name="ctm_address" class="form-control" value="<?= $row['ctm_address'] ?>"  />
               </div>
               <div class="mb-3">
-                <button type="submit" name="edit" class="btn btn-warning">แก้ไขข้อมูล</button>
+                <button type="submit" name="edit_profile" class="btn btn-warning">แก้ไขข้อมูล</button>
                 <a href="index_ctm.php" class="btn btn-danger">ยกเลิก</a>
               </div>
             </form>
@@ -75,19 +81,6 @@ if (!isset($_SESSION['is_login'])) {
       </div>
     </div>
   </div>
-  <!-- <div class="container">
-        <div class="row">
-            <div class="col-md-12 mt-2">
-                <h1>โปรไฟล์</h1>
-                <div class="card mt-5">
-                    <div class="card-body">
-                        <h4>รายละเอียด</h4>
-                        <span class="mt-5">Username</span> : <span><?php echo $row['ctm_user']; ?></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
   <script src="js/bootstrap.min.js"></script>
 </body>
 

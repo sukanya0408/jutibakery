@@ -21,7 +21,7 @@
           <a class="nav-link"><?php echo $_SESSION['ctm_user']; ?></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">ตะกร้าของฉัน</a>
+          <a class="nav-link" href="my_basket.php">ตะกร้าของฉัน</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="logout.php">Logout</a>
