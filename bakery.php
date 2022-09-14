@@ -37,6 +37,7 @@ session_start();
                                     <th>รูปภาพเบเกอรี่</th>
                                     <th>ชื่อเบเกอรี่</th>
                                     <th>ราคา</th>
+                                    <th>ประเภทสินค้า</th>
                                     <th>จำนวนเบเกอรี่</th>
                                     <th>วันที่เพิ่มสินค้า</th>
                                     <th>วันหมดอายุ</th>
@@ -54,7 +55,7 @@ session_start();
                                 ?>
                                     <tr>
                                         <td><?= $i++; ?></td>
-                                        <td></td>
+                                        <td><img src="images/<?php echo $meResult['bk_image']; ?>" border="0"></td>
                                         <td><?= $row['bk_name']; ?></td>
                                         <td><?= $row['bk_price']; ?></td>
                                         <td><?= $row['product_type_id']; ?></td>
