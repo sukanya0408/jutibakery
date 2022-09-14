@@ -40,16 +40,16 @@
 
 <body>
 <form id="frmcart" name="frmcart" method="post" action="?act=update">
-  <table width="600" border="0" align="center" class="square">
+  <table width="600" border="1" align="center" class="square">
     <tr>
       <td colspan="5" bgcolor="#CCCCCC">
-      <b>ตะกร้าสินค้า</span></td>
+      <b>รถเข็น</span></td>
     </tr>
     <tr>
       <td bgcolor="#EAEAEA">สินค้า</td>
       <td align="center" bgcolor="#EAEAEA">ราคา</td>
       <td align="center" bgcolor="#EAEAEA">จำนวน</td>
-      <td align="center" bgcolor="#EAEAEA">รวม(บาท)</td>
+      <td align="center" bgcolor="#EAEAEA">ราคารวม</td>
       <td align="center" bgcolor="#EAEAEA">ลบ</td>
     </tr>
 <?php
@@ -82,9 +82,9 @@ if(!empty($_SESSION['cart']))
 }
 ?>
 <tr>
-<td><a href="product.php">กลับหน้ารายการสินค้า</a></td>
+<td><a href="index_ctm.php">กลับหน้าหลัก</a></td>
 <td colspan="4" align="right">
-    <input type="submit" name="button" id="button" value="ปรับปรุง" />
+    <input type="submit" name="button" id="button" value="แก้ไข" />
     <input type="button" name="Submit2" value="สั่งซื้อ" onclick="window.location='confirm.php';" />
 </td>
 </tr>

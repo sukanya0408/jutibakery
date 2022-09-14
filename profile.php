@@ -41,7 +41,7 @@ if (!isset($_SESSION['is_login'])) {
                 ?>
         <div class="card border-0">
           <div class="card-body">
-            <form action="crud.php" method="POST" class="row g-3">
+            <form action="profile_edit.php" method="POST" class="row g-3">
               <input type="hidden" name="customer_id" value="<?= $row['customer_id'] ?>">
               <div class="col-md-6">
                 <label class="form-label">ชื่อ :</label>
@@ -72,7 +72,7 @@ if (!isset($_SESSION['is_login'])) {
                 <input type="text" name="ctm_address" class="form-control" value="<?= $row['ctm_address'] ?>"  />
               </div>
               <div class="mb-3">
-                <button type="submit" name="edit" class="btn btn-warning">แก้ไขข้อมูล</button>
+                <button type="submit" name="edit_profile" class="btn btn-warning">แก้ไขข้อมูล</button>
                 <a href="index_ctm.php" class="btn btn-danger">ยกเลิก</a>
               </div>
             </form>

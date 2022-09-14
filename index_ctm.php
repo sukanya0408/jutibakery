@@ -62,7 +62,7 @@ if (!isset($_SESSION['is_login'])) {
                 <img src="image/<?= $row['bk_image']; ?>" width="80%"><br>
                 <?= $row['bk_name'];  ?> <br>ราคา<?= $row['bk_price']; ?>บาท</br>
             </br>
-            <a class="btn btn-primary"style="width:50%" disabled href="my_basket.php?bk_id=<?php echo $result['bk_id'];?>" role="button">สั่งซื้อ</a>
+            <a class="btn btn-primary"style="width:80%" disabled href="my_basket.php?bk_id=<?php echo $result['bk_id'];?>" role="button">เพิ่มไปยังตะกร้า</a>
               </div>
             <?php } ?>
           </div>
