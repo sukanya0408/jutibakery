@@ -26,40 +26,32 @@ session_start();
                         <form action="bakery_crud.php" method="POST">
                         <div class="col mb-3">
                             <div class="col mb-2">
-                                <label>จำนวนเงินที่โอน:</label>
+                                <label>ชื่อ-นามสกุล :</label>
                                 <input type="text" name="bk_name" class="form-control" />
                             </div>
                             <div class="col mb-2">
-                                <label>ราคา:</label>
-                                <input type="text" name="bk_price" class="form-control" />
-                            </div>
-                            <div>
-                                        <label>ประเภทสินค้า:</label>
-                                        <select class="form-select" name="product_type" id="product_type">
+                                <label>ธนาคารที่โอน :</label>
+                                <select class="form-select" name="payment" id="payment">
                                             <?php
                                             require 'conn.php';
-                                            $stmt = $conn->query("select product_type_name from product_type WHERE product_type_name IN ('ขนมปัง','คุกกี้','เค้ก','พาย')");
+                                            $stmt = $conn->query("select bankaccount from payment WHERE bankaccount IN ('ธนาคารกรุงไทย','ธนาคารไทยพาณิชย์','ธนาคารกรุงเทพ')");
                                             while ($row = $stmt->fetch()) {
                                             ?>
-                                                <option value="<?= $row['product_type_id'] ?>"><?= $row['product_type_name'] ?></option>
+                                                <option value="<?= $row['payment_id'] ?>"><?= $row['bankaccount'] ?></option>
                                             <?php }  ?>
                                         </select>
-                                    </div>
-                            <div class="col mb-2">
-                                <label>จำนวนเบเกอรี่:</label>
-                                <input type="text" name="bk_number" class="form-control" />
                             </div>
                             <div class="col mb-2">
-                                <label>รูปภาพเบเกอรี่:</label>
-                                <input type="file" name="bk_image" class="form-control" />
+                                <label>จำนวนเงินที่โอน :</label>
+                                <input type="text" name="amount" class="form-control" />
                             </div>
                             <div class="col mb-2">
-                                <label>วันที่เพิ่มสินค้า:</label>
-                                <input type="date" name="update_date" class="form-control" />
+                                <label>หลักฐานการชำระเงิน :</label>
+                                <input type="file" name="payment_image" class="form-control" />
                             </div>
                             <div class="col mb-2">
-                                <label>วันหมดอายุ:</label>
-                                <input type="date" name="expire_date" class="form-control" />
+                                <label>วันที่ชำระ :</label>
+                                <input type="date" name="payment_date" class="form-control" />
                             </div>
                             <div class="mb-3">
                                 <button type="submit" name="save_bakery" class="btn btn-primary">ยืนยัน</button>
