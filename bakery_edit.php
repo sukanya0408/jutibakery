@@ -38,31 +38,39 @@ include('conn.php');
                         <form action="bakery_crud.php" method="POST">
                             <input type="hidden" name="bk_id" value="<?= $result['bk_id'] ?>">
                             <div class="mb-3">
-                                <label>ชื่อเบเกอรี่:</label>
+                                <label>ชื่อเบเกอรี่ :</label>
                                 <input type="text" name="bk_name" class="form-control" value="<?= $result['bk_name'] ?>" />
                             </div>
                             <div class="mb-3">
-                                <label>ราคา:</label>
+                                <label>ราคา :</label>
                                 <input type="text" name="bk_price" class="form-control" value="<?= $result['bk_price'] ?>" />
                             </div>
                             <div class="mb-3">
-                                <label>ประเภทสินค้า:</label>
-                                <input type="text" name="product_type_id" class="form-control" value="<?= $result['product_type_id'] ?>" />
+                            <label>ประเภทสินค้า :</label>
+                                        <select class="form-select" name="product_type" id="product_type">
+                                            <?php
+                                            require 'conn.php';
+                                            $stmt = $conn->query("select product_type_name from product_type WHERE product_type_name IN ('ขนมปัง','คุกกี้','เค้ก','พาย')");
+                                            while ($row = $stmt->fetch()) {
+                                            ?>
+                                                <option value="<?= $row['product_type_id'] ?>"><?= $row['product_type_name'] ?></option>
+                                            <?php }  ?>
+                                        </select>
                             </div>
                             <div class="mb-3">
-                                <label>จำนวนเบเกอรี่:</label>
+                                <label>จำนวนเบเกอรี่ :</label>
                                 <input type="text" name="bk_number" class="form-control" value="<?= $result['bk_number'] ?>" />
                             </div>
                             <div class="mb-3">
-                                <label>รูปภาพเบเกอรี่:</label>
+                                <label>รูปภาพเบเกอรี่ :</label>
                                 <input type="file" name="bk_image" class="form-control" value="<?= $result['bk_image'] ?>" />
                             </div>
                             <div class="mb-3">
-                                <label>วันที่เพิ่มสินค้า:</label>
+                                <label>วันที่เพิ่มสินค้า :</label>
                                 <input type="date" name="update_date" class="form-control" value="<?= $result['update_date'] ?>" />
                             </div>
                             <div class="mb-3">
-                                <label>วันหมดอายุ:</label>
+                                <label>วันหมดอายุ :</label>
                                 <input type="date" name="expire_date" class="form-control" value="<?= $result['expire_date'] ?>" />
                             </div>
                             <div class="mb-3">
