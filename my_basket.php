@@ -1,4 +1,4 @@
-<?php
+<?php 
 	session_start();
 	
 	$bk_id = $_GET['bk_id']; 
@@ -16,17 +16,17 @@
 		}
 	}
 
-	if($act=='remove' && !empty($bk_id))  //ยกเลิกการสั่งซื้อ
+	if($bk_id=='remove' && !empty($bk_id))  //ยกเลิกการสั่งซื้อ
 	{
 		unset($_SESSION['cart'][$bk_id]);
 	}
 
-	if($act=='update')
+	if($bk_id=='update')
 	{
 		$amount_array = $_POST['amount'];
 		foreach($amount_array as $bk_id=>$amount)
 		{
-			$_SESSION['cart'][$bk_id]=$amount;
+			$_SESSION['my_basket'][$bk_id]=$amount;
 		}
 	}
 ?>
@@ -39,27 +39,24 @@
 </head>
 
 <body>
-<form id="frmcart" name="frmcart" method="post" action="?act=update">
-  <table width="600" border="1" align="center" class="square">
+<form id="my_basket" name="my_basket" method="post" action="?bk_id=update">
+  <table width="1400" border="1" align="center" class="square">
+  <h2><font color="#252B31"> ตะกร้าของฉัน </font></h2>
     <tr>
-      <td colspan="5" bgcolor="#CCCCCC">
-      <b>รถเข็น</span></td>
-    </tr>
-    <tr>
-      <td bgcolor="#EAEAEA">สินค้า</td>
-      <td align="center" bgcolor="#EAEAEA">ราคา</td>
-      <td align="center" bgcolor="#EAEAEA">จำนวน</td>
-      <td align="center" bgcolor="#EAEAEA">ราคารวม</td>
-      <td align="center" bgcolor="#EAEAEA">ลบ</td>
+      <td bgcolor="#FFFFCC">สินค้า</td>
+      <td align="center" bgcolor="#FFFFCC">ราคา</td>
+      <td align="center" bgcolor="#FFFFCC">จำนวน</td>
+      <td align="center" bgcolor="#FFFFCC">ราคารวม</td>
+      <td align="center" bgcolor="#FFFFCC">ลบ</td>
     </tr>
 <?php
 $total=0;
 if(!empty($_SESSION['cart']))
 {
-	include("connect.php");
-	foreach($_SESSION['cart'] as $p_id=>$qty)
+	include("conn.php");
+	foreach($_SESSION['my_basket'] as $bk_id=>$qty)
 	{
-		$sql = "select * from product where p_id=$p_id";
+		$sql = "select * from bakery where bk_id=$bk_id";
 		$query = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_array($query);
 		$sum = $row['p_price'] * $qty;
@@ -84,7 +81,7 @@ if(!empty($_SESSION['cart']))
 <tr>
 <td><a href="index_ctm.php">กลับหน้าหลัก</a></td>
 <td colspan="4" align="right">
-    <input type="submit" name="button" id="button" value="แก้ไข" />
+    <input type="submit" name="edit" id="button" value="แก้ไข" />
     <input type="button" name="Submit2" value="สั่งซื้อ" onclick="window.location='confirm.php';" />
 </td>
 </tr>

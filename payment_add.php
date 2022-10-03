@@ -19,42 +19,38 @@ session_start();
                 <div class="card">
                     <div class="card-body">
                         <h3>แจ้งชำระเงิน
-                        <a href="#" class="btn btn-danger float-end">ย้อนกลับ</a>
+                        <a href="my_basket.php" class="btn btn-danger float-end">ย้อนกลับ</a>
                         </h3>
                     </div>
                     <div class="card-body">
                         <form action="bakery_crud.php" method="POST">
                         <div class="col mb-3">
                             <div class="col mb-2">
-                                <label>ชื่อ-นามสกุล :</label>
+                                <label>ชื่อ-นามสกุล</label>
                                 <input type="text" name="bk_name" class="form-control" />
                             </div>
                             <div class="col mb-2">
-                                <label>ธนาคารที่โอน :</label>
-                                <select class="form-select" name="payment" id="payment">
-                                            <?php
-                                            require 'conn.php';
-                                            $stmt = $conn->query("select bankaccount from payment WHERE bankaccount IN ('ธนาคารกรุงไทย','ธนาคารไทยพาณิชย์','ธนาคารกรุงเทพ')");
-                                            while ($row = $stmt->fetch()) {
-                                            ?>
-                                                <option value="<?= $row['payment_id'] ?>"><?= $row['bankaccount'] ?></option>
-                                            <?php }  ?>
-                                        </select>
+                                <label>ธนาคารที่โอน</label>
+							<select name="payment" class="form-control">
+								<option value="1">กรุงไทย</option>
+								<option value="2">ไทยพาณิชย์</option>
+								<option value="3">กรุงเทพ</option>
+							</select>
                             </div>
                             <div class="col mb-2">
-                                <label>จำนวนเงินที่โอน :</label>
+                                <label>จำนวนเงิน</label>
                                 <input type="text" name="amount" class="form-control" />
                             </div>
                             <div class="col mb-2">
-                                <label>หลักฐานการชำระเงิน :</label>
+                                <label>หลักฐานการชำระเงิน</label>
                                 <input type="file" name="payment_image" class="form-control" />
                             </div>
                             <div class="col mb-2">
-                                <label>วันที่ชำระ :</label>
+                                <label>วันที่ชำระ </label>
                                 <input type="date" name="payment_date" class="form-control" />
                             </div>
                             <div class="mb-3">
-                                <button type="submit" name="save_bakery" class="btn btn-primary">ยืนยัน</button>
+                                <button type="submit" name="confirm_pay" class="btn btn-primary">ยืนยัน</button>
                             </div>
                         </form>
 

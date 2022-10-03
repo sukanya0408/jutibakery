@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html>
-    <head>
-    <?php include 'index_ctm.php' ?>
-</head>
-<body>
-</body>
-</html>
+<?php
+session_start();
+print_r($_SESSION);
+    include 'index_ctm.php';
+?>

@@ -26,39 +26,36 @@ session_start();
                         <form action="bakery_crud.php" method="POST">
                         <div class="col mb-3">
                             <div class="col mb-2">
-                                <label>ชื่อเบเกอรี่:</label>
+                                <label>ชื่อเบเกอรี่</label>
                                 <input type="text" name="bk_name" class="form-control" />
                             </div>
                             <div class="col mb-2">
-                                <label>ราคา:</label>
+                                <label>ราคา</label>
                                 <input type="text" name="bk_price" class="form-control" />
                             </div>
                             <div>
-                                        <label>ประเภทสินค้า:</label>
-                                        <select class="form-select" name="product_type" id="product_type">
-                                            <?php
-                                            require 'conn.php';
-                                            $stmt = $conn->query("select product_type_name from product_type WHERE product_type_name IN ('ขนมปัง','คุกกี้','เค้ก','พาย')");
-                                            while ($row = $stmt->fetch()) {
-                                            ?>
-                                                <option value="<?= $row['product_type_id'] ?>"><?= $row['product_type_name'] ?></option>
-                                            <?php }  ?>
-                                        </select>
+                            <label>ประเภทสินค้า</label>
+							<select name="product_type" class="form-control">
+								<option value="1">ขนมปัง</option>
+								<option value="2">คุกกี้</option>
+								<option value="3">เค้ก</option>
+                                <option value="4">พาย</option>
+							</select>
                                     </div>
                             <div class="col mb-2">
-                                <label>จำนวนเบเกอรี่:</label>
+                                <label>จำนวนเบเกอรี่</label>
                                 <input type="text" name="bk_number" class="form-control" />
                             </div>
                             <div class="col mb-2">
-                                <label>รูปภาพเบเกอรี่:</label>
+                                <label>รูปภาพเบเกอรี่</label>
                                 <input type="file" name="bk_image" class="form-control" />
                             </div>
                             <div class="col mb-2">
-                                <label>วันที่เพิ่มสินค้า:</label>
+                                <label>วันที่เพิ่มสินค้า</label>
                                 <input type="date" name="update_date" class="form-control" />
                             </div>
                             <div class="col mb-2">
-                                <label>วันหมดอายุ:</label>
+                                <label>วันหมดอายุ</label>
                                 <input type="date" name="expire_date" class="form-control" />
                             </div>
                             <div class="mb-3">
