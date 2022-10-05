@@ -36,11 +36,11 @@
                         <h5 class="card-title ">สำหรับ ADMIN</h5>
                         <form action="login_ad_db.php" method="POST">
                             <div class="col-12 mt-2">
-                                <label class="form-label">User :</label>
+                                <label class="form-label">User </label>
                                 <input type="text" name="admin_username" class="form-control" />
                             </div>
                             <div class="col-12 mt-2">
-                                <label class="form-label">Password :</label>
+                                <label class="form-label">Password </label>
                                 <input type="password" name="admin_password" class="form-control" />
                             </div>
                             <div class="text-center">

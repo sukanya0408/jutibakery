@@ -9,59 +9,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
     <title>Login</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+        * {
+            font-family: 'Kanit', sans-serif;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container mt-5 pt-5">
-        <div class="row">
-            <div class="col-12 col-sm-8 col-md-6 m-auto">
-            <?php if (isset($_SESSION['error_fill'])) : ?>
-                    <div class="alert alert-danger" role="alert">
-                        <?php echo $_SESSION['error_fill']; ?>
-                    </div>
-                <?php endif; ?>
-            <?php if (isset($_SESSION['error_user'])) : ?>
-                    <div class="alert alert-danger" role="alert">
-                        <?php echo $_SESSION['error_user']; ?>
-                    </div>
-                <?php endif; ?>
-            <?php if (isset($_SESSION['error_pass'])) : ?>
-                    <div class="alert alert-danger" role="alert">
-                        <?php echo $_SESSION['error_pass']; ?>
-                    </div>
-                <?php endif; ?>
-                <div class="card border-0 shadow">
-                    <div class="card-body">
-                        <h1 class="card-title text-center">JUTI BAKERY</h1>
-                        <form action="login_db.php" method="POST">
-                            <div class="col-12 mt-2">
-                                <label class="form-label">Username :</label>
-                                <input type="text" name="ctm_user" class="form-control" />
-                            </div>
-                            <div class="col-12 mt-2">
-                                <label class="form-label">Password :</label>
-                                <input type="password" name="ctm_password" class="form-control" />
-                            </div>
-                            <div class="text-center">
-                                <button type="submit" name="login" class="btn btn-primary btn-block my-3">Login</button>
-                                <a href="register.php" class="nav-link">
-                                    <h6>สมัครสมาชิกก่อนเข้าสู่ระบบ!!</h6>
-                                </a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="login-form">
+        <h1>เข้าสู่ระบบ</h1>
+        <form action="login_db.php" method="POST">
+             <p>ชื่อผู้ใช้</p>
+             <input type="text" name="ctm_user" />
+             <p>รหัสผ่าน</p>
+             <input type="password" name="ctm_password" />
+             <center>
+             <button type="submit" name="login">เข้าสู่ระบบ</button> 
+             <br>
+             <a href="register.php"><p class="small">สมัครสมาชิกผู้ใช้ใหม่</p></a>
+             <center>
+        </form>
     </div>
-</body>
-
 </html>
-<?php
-if (isset($_SESSION['error_fill']) || isset($_SESSION['error_user']) || isset($_SESSION['error_pass'])) {
-    unset($_SESSION['error_fill']); 
-    unset($_SESSION['error_user']);
-    unset($_SESSION['error_pass']);
-}
-?>

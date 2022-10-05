@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <nav class="navbar navbar-expand-lg navbar-pink bg-warning">
   <div class="container">
     <a class="navbar-brand" href="home.php"><h1><b>Juti bakery</b></h1></a>
